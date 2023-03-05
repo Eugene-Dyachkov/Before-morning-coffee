@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url(back.jpg);
+    background-size: cover;
+}
+.window{
+    height: 100%;
+    width: 100%;
+}
+
+.valutes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(55, 255, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    margin: 2vw;
+}
+
+.valuta{
+    width: 30vw;
+    height: 10vw;
+}
+
+#eu{
+    position: relative;
+    left: 45%;
+    border: 3px solid rgb(255, 0, 0);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+#kz{
+    position: relative;
+    left: -45%;
+    border: 3px solid rgb(255, 0, 0);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    border: 3px solid rgb(55, 255, 0);
+    backdrop-filter: blur(15px);
+    border-radius: 20px
+}
+.item{
+    width: 35vw;
+    height: 35vw;
+}
+#day{
+    position: relative;
+    left: 5%;
+    border: 3px solid rgb(255, 0, 0);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+#weather{
+    position: relative;
+    left: -5%;
+    border: 3px solid rgb(255, 0, 0);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+#notes{
+    margin: 2vw;
+    padding: 2vw;
+    height: 100vw;
+}
+
+#news{
+    height: 100vw;
+    margin: 2vw;
+    padding: 2vw;
+}

@@ -1,0 +1,56 @@
+{% extends 'MainApp/base.html' %}
+
+{% load static %}
+
+{% block head %}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site</title>
+<link rel="stylesheet" href="{% static 'MainApp/css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="window">
+        <div class="valutes">
+            <div id="eu" class="valuta">
+
+            </div>
+
+            <div id="kz" class="valuta">
+
+            </div>
+        </div>
+
+        <div class="items">
+            <div id="weather" class="item">
+
+            </div>
+            <div id="day" class="item">
+
+            </div>
+        </div>
+
+        <div id="notes" class="items">
+            <div id="numberNotes">
+                <h1>1</h1>
+            </div>
+
+            <div id="textNotes">
+                <h1>2</h1>
+            </div>
+        </div>
+        <div id="news" class="items">
+            <div id="numberNews">
+                <h1>1</h1>
+            </div>
+
+            <div id="textNotes">
+                <h1>2</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
