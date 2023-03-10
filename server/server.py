@@ -11,7 +11,7 @@ class Get_data():
     async def get_weather(self):
         async with ClientSession() as session:
             async with session.get(
-                "https://api.openweathermap.org/data/2.5/weather?lat=53.19&lon=45.01&appid=e4be4831d7607ab68d261546d157d614&units=metric"
+                "https://api.openweathermap.org/data/2.5/weather?lat=53.19&lon=45.01&appid=  &units=metric"
             ) as response:
                 content = await response.json()
                 self.weather = [content['name'], content['main']['temp']]
