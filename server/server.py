@@ -1,3 +1,4 @@
+import os
 import asyncio
 import websockets
 import json
@@ -11,7 +12,7 @@ class Get_data():
     async def get_weather(self):
         async with ClientSession() as session:
             async with session.get(
-                "https://api.openweathermap.org/data/2.5/weather?lat=53.19&lon=45.01&appid=  &units=metric"
+                f"https://api.openweathermap.org/data/2.5/weather?lat=53.19&lon=45.01&appid={os.getenv('weather_token')}&units=metric"
             ) as response:
                 content = await response.json()
                 self.weather = [content['name'], content['main']['temp']]
@@ -46,16 +47,18 @@ class Get_Db:
     async def connect(self):
         try:
             async with await psycopg.AsyncConnection.connect(
-                host = "192.168.88.225",
-                user = "eugene",
-                password = "123",
-                dbname = "site_db") as self.conn:
+                host = os.getenv('host'),
+                user = os.getenv('user'),
+                password = os.getenv('password'),
+                dbname = os.getenv('dbname')) as self.conn:
 
                 async with self.conn.cursor()  as cur:
                     await cur.execute(
                         "SELECT version();"
                     )
                     print(await cur.fetchone())
+                    event_loop.create_task(self.create_table())
+
         except Exception as ex:
             print(ex)
 

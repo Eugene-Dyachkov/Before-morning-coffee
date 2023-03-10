@@ -9,7 +9,7 @@
     align-items: center;
     min-width: 100%;
     min-height: 100%;
-    background-image: url(back.jpg);
+    background-image: url('/static/MainApp/images/back.jpg');
     background-size: cover;
 }
 .window{
@@ -57,32 +57,84 @@
     border-radius: 20px
 }
 .item{
-    width: 35vw;
-    height: 35vw;
+    width: 40vw;
+    height: 40vw;
 }
 #day{
     position: relative;
-    left: 5%;
+    left: 4%;
     border: 3px solid rgb(255, 0, 0);
     backdrop-filter: blur(15px);
     border-radius: 20px;
 }
 #weather{
     position: relative;
-    left: -5%;
+    left: -4%;
     border: 3px solid rgb(255, 0, 0);
     backdrop-filter: blur(15px);
     border-radius: 20px;
 }
 
 #notes{
+    display: block;
+    justify-content: center;
+    align-items: center;
     margin: 2vw;
     padding: 2vw;
     height: 100vw;
+    overflow: auto;
 }
 
 #news{
+    display: block;
+    justify-content: center;
+    align-items: center;
     height: 100vw;
     margin: 2vw;
     padding: 2vw;
+}
+
+.interior_item{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 20px;
+
+}
+#top_weather{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#botom_weather{
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#temperature{
+    position: relative;
+    border: 3px solid rgb(255, 0, 0);
+}
+#sky{
+    position: relative;
+    border: 3px solid rgb(16, 0, 122);
+}
+
+#name{
+    width: 35vw;
+    height: 10vw;
+    border: 3px solid rgb(16, 0, 122);
+    border-radius: 20px;
+}
+
+
+.box{
+    font-size: 6vw;
+    margin-top: 1vh;
+    border-radius: 20px;
+    width: 85vw;
+    height: 20vw;
+    border: 3px solid rgb(16, 0, 122);
 }
