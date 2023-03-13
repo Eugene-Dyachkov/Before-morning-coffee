@@ -57,7 +57,6 @@ class Get_Db:
                         "SELECT version();"
                     )
                     print(await cur.fetchone())
-                    event_loop.create_task(self.create_table())
 
         except Exception as ex:
             print(ex)
@@ -88,13 +87,12 @@ async def new_client(client_socket, path):
     while True:
         try:
             comand = await client_socket.recv()
-            print(comand)
         except:
             pass
 
 async def start_server():
     db = Get_Db()
-    await websockets.serve(new_client, "192.168.88.228", 8855)
+    await websockets.serve(new_client, os.getenv('server_id'), 8855)
 
 if __name__ == "__main__":
     event_loop = asyncio.new_event_loop()
