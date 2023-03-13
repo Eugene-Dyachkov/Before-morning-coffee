@@ -1,2 +1,2 @@
-# Before-morning-coffee
-A site that helps you gather your thoughts before morning coffee.
+# Before morning coffee
+Этот сайт позволит просматривать всю нужную информацию с утра в одном месте. Погоду, календарь, новости и заметки на сегодня - все это в одном месте ещё до утреннего кофе!

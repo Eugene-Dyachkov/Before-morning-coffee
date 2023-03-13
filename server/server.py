@@ -2,7 +2,6 @@ import os
 import asyncio
 import websockets
 import json
-import requests
 import datetime
 import psycopg
 from aiohttp import ClientSession
@@ -32,7 +31,7 @@ class Get_data():
 
     async def get_tg(self):
         create_json = await asyncio.create_subprocess_shell(
-            'snscrape --max-result 1 --jsonl telegram-channel breakingmash > telegram.json'
+            'snscrape --max-result 1 --jsonl telegram-channel news_sirena > telegram.json'
             )
         await create_json.wait()
         with open('telegram.json') as tg_json:
